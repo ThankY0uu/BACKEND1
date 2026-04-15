@@ -11,13 +11,13 @@ class GerechtenController extends Controller
     public function index()
     {
         $gerechten = \App\Models\Gerecht::all();
-        return view('gerechten.overzicht', ['gerechten' => $gerechten]);
+        return view('admin.crud.overzicht', ['gerechten' => $gerechten]);
     }
 
     // Toon het formulier om een gerecht toe te voegen
     public function create()
     {
-        return view('gerechten.toevoegen');
+        return view('admin.crud.toevoegen');
     }
 
     // Sla het nieuwe gerecht op
