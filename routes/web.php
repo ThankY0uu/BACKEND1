@@ -2,7 +2,15 @@
 
 use App\Http\Controllers\GerechtenController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\HomeController;
 
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/menu', [MenuController::class, 'index']);
+Route::get('/contact', [ContactController::class, 'index']);
+Route::post('/contact', [ContactController::class, 'store']);
+Route::get('/admin/berichten', [ContactController::class, 'berichten'])->middleware('auth');
 Route::get('/gerechten', [GerechtenController::class, 'index']);
 Route::get('/gerechten/toevoegen', [GerechtenController::class, 'create']);
 Route::post('/gerechten', [GerechtenController::class, 'store']);
