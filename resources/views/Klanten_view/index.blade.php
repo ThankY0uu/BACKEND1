@@ -3,9 +3,9 @@
 @section('inhoud')
     <div class="hero">
         <div class="hero-tekst">
-            <h1>Selamat Datang bij Kampung Makan! 🇲🇾</h1>
+            <h1>Selamat Datang bij Kampung Makan!</h1>
             <p>Welkom bij ons authentieke Maleisische restaurant in Nijmegen.</p>
-            <p>Geniet van traditionele gerechten zoals Nasi Lemak, Rendang en Satay.</p>
+            <p>Geniet van traditionele gerechten zoals Nasi Lemak, CKT en Roti Canai.</p>
             <a href="/menu">Bekijk ons menu</a>
         </div>
         <div class="hero-fotos">

@@ -7,8 +7,8 @@
 </head>
 <body>
 
-<header><div><img src="/img/pngtree-malaysia-wau-kite-in-cartoon-style-isolated-vector-png-image_18433499.png"
-                  alt=""><h1>Kampung Makan</h1></div>
+<header>
+                 <h1>Kampung Makan</h1>
 
     <nav>
         <a href="/">Home</a>
