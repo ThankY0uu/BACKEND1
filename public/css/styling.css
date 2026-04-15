@@ -11,6 +11,11 @@ body {
     flex-direction: column;
 }
 
+h1 {
+    color: #CC0001;
+    margin-bottom: 20px;
+}
+
 header {
     background-color: #CC0001;
     padding: 40px 30px;
@@ -23,39 +28,36 @@ header h1 {
     color: #FFD700;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-main {
-    padding: 30px;
-    flex: 1;
-}
-
 header div {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.gerecht {
-    border-bottom: 2px solid #f0f0f0;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+header div img {
+    height: 50px;
+    width: auto;
 }
 
-.gerecht h3 {
-    color: #CC0001;
-    font-size: 1.3em;
-    margin-bottom: 5px;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
 }
 
-.omschrijving {
-    color: #666;
-    font-size: 0.95em;
+main {
+    padding: 30px;
+    flex: 1;
 }
+
+footer {
+    background-color: #005B2A;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -67,12 +69,24 @@ th, td {
     border: 1px solid #ddd;
     text-align: left;
 }
-.foutmelding {
-    color: red;
-    margin-bottom: 10px;
+
+th {
+    background-color: #CC0001;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
 }
 
 form input {
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
     padding: 8px;
     width: 300px;
     border: 1px solid #ddd;
@@ -92,24 +106,7 @@ form button:hover {
     background-color: #FFD700;
     color: black;
 }
-th {
-    background-color: #CC0001;
-    color: white;
-}
-.dashboard {
-    display: flex;
-    gap: 30px;
-    margin-top: 30px;
-}
 
-.dashboard-kaart {
-    flex: 1;
-    background-color: #f9f9f9;
-    border: 2px solid #CC0001;
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-}
 .knop {
     background-color: #CC0001;
     color: white;
@@ -130,6 +127,61 @@ th {
     cursor: pointer;
     text-decoration: underline;
 }
+
+.foutmelding {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.succesmelding {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.gerecht {
+    border-bottom: 2px solid #f0f0f0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gerecht h3 {
+    color: #CC0001;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.omschrijving {
+    color: #666;
+    font-size: 0.95em;
+}
+
+.prijs {
+    color: #FFD700;
+    background-color: #CC0001;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 15px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.dashboard {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-kaart {
+    flex: 1;
+    background-color: #f9f9f9;
+    border: 2px solid #CC0001;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
 .dashboard-kaart h2 {
     color: #CC0001;
     margin-bottom: 10px;
@@ -139,17 +191,7 @@ th {
     color: #666;
     margin-bottom: 20px;
 }
-.succesmelding {
-    color: green;
-    margin-bottom: 10px;
-}
 
-textarea {
-    padding: 8px;
-    width: 300px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
 .dashboard-kaart a {
     background-color: #CC0001;
     color: white;
@@ -162,32 +204,13 @@ textarea {
     background-color: #FFD700;
     color: black;
 }
-tr:hover {
-    background-color: #f9f9f9;
-}
-.prijs {
-    color: #FFD700;
-    background-color: #CC0001;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 5px 15px;
-    border-radius: 20px;
-    white-space: nowrap;
-}
 
-h1 {
-    color: #CC0001;
-    margin-bottom: 20px;
+.hero {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 30px;
 }
-header div img {
-    height: 50px;
-    width: auto;
-}.hero {
-     display: flex;
-     gap: 30px;
-     align-items: center;
-     padding: 30px;
- }
 
 .hero-tekst {
     flex: 1;
@@ -211,11 +234,4 @@ header div img {
 
 .slide.actief {
     opacity: 1;
-}
-footer {
-    background-color: #005B2A;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 50px;
 }
