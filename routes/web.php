@@ -1,13 +1,10 @@
 <?php
 
-use App\Http\Controllers\RestaurantController;
+use App\Http\Controllers\GerechtenController;
 
-Route::get('/restaurants', [RestaurantController::class, 'index']);
-// Deze had je al (om het formulier te zien)
-Route::get('/restaurants/nieuw', [RestaurantController::class, 'create']);
-
-// Deze moet erbij (om de data op te slaan)
-Route::post('/restaurants', [RestaurantController::class, 'store']);
-Route::get('/restaurants/{id}/bewerken', [RestaurantController::class, 'edit']);
-Route::post('/restaurants/{id}/update', [RestaurantController::class, 'update']);
-Route::post('/restaurants/{id}/verwijderen', [RestaurantController::class, 'destroy']);
+Route::get('/gerechten', [GerechtenController::class, 'index']);
+Route::get('/gerechten/toevoegen', [GerechtenController::class, 'create']);
+Route::post('/gerechten', [GerechtenController::class, 'store']);
+Route::get('/gerechten/{id}/bewerken', [GerechtenController::class, 'edit']);
+Route::post('/gerechten/{id}/update', [GerechtenController::class, 'update']);
+Route::post('/gerechten/{id}/verwijderen', [GerechtenController::class, 'destroy']);
