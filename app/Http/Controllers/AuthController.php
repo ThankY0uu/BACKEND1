@@ -10,9 +10,11 @@ class AuthController extends Controller
     // Toon de loginpagina
     public function index()
     {
+        if (Auth::check()) {
+            return redirect('/admin');
+        }
         return view('admin.login');
     }
-
     // Verwerk het loginformulier
     public function login(Request $request)
     {
@@ -22,8 +24,7 @@ class AuthController extends Controller
         ];
 
         if (Auth::attempt($gegevens)) {
-            // Inloggen gelukt, ga naar admin
-            return redirect('/admin');
+            return redirect()->intended('/admin');
         }
 
         // Inloggen mislukt, terug naar login met foutmelding

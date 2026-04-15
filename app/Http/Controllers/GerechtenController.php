@@ -36,7 +36,7 @@ class GerechtenController extends Controller
     public function edit($id)
     {
         $gerecht = Gerecht::findOrFail($id);
-        return view('gerechten.bewerken', ['gerecht' => $gerecht]);
+        return view('admin.crud.bewerken', ['gerecht' => $gerecht]);
     }
 
     // Sla de wijzigingen op

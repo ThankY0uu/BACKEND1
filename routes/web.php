@@ -5,7 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\HomeController;
-
+Route::get('/admin/dashboard', [AuthController::class, 'index'])->middleware('auth');
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/menu', [MenuController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
@@ -22,4 +22,6 @@ Route::get('/login', [AuthController::class, 'index']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/logout', [AuthController::class, 'logout']);
 
-Route::get('/admin', [GerechtenController::class, 'index'])->middleware('auth');
+Route::get('/admin', function() {
+    return view('admin.dashboard');
+})->middleware('auth');
